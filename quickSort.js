@@ -1,21 +1,46 @@
 //给一个随机数组，用快速排序的方法进行排序
 
-function quickSort(arr) {
-  if (arr.length <= 1) {
-    return arr;
+// function quickSort(arr) {
+//   if (arr.length <= 1) {
+//     return arr;
+//   }
+//   var left = [];
+//   var right = [];
+//   var mid = Math.floor(arr.length / 2);
+//   var midValue = arr.splice(mid, 1)[0];
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] < midValue) {
+//       left.push(arr[i]);
+//     } else {
+//       right.push(arr[i]);
+//     }
+//   }
+//   return quickSort(left).concat([midValue], quickSort(right));
+// }
+function swap(arr, i, j) {
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+}
+
+function quickSort(arr, left = 0, right = arr.length - 1) {
+  if (left < right) {
+    var mid = partition(arr, left, right);
+    quickSort(arr, left, mid - 1);
+    quickSort(arr, mid + 1, right);
   }
-  var left = [];
-  var right = [];
-  var mid = Math.floor(arr.length / 2);
-  var midValue = arr.splice(mid, 1)[0];
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] < midValue) {
-      left.push(arr[i]);
-    } else {
-      right.push(arr[i]);
+  return arr;
+}
+
+function partition(arr, left, right) {
+  let pivot = arr[right];
+  let i = left;
+  for (let j = left; j < right; j++) {
+    if (arr[j] < pivot) {
+      swap(arr, i, j);
+      i++;
     }
   }
-  return quickSort(left).concat([midValue], quickSort(right));
+  swap(arr, i, right);
+  return i;
 }
 
 // test
