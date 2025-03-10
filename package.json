@@ -1,0 +1,16 @@
+{
+  "name": "js-handwritten-algorithms",
+  "version": "1.0.0",
+  "description": "JavaScript手写算法集合",
+  "main": "index.js",
+  "scripts": {
+    "update-readme": "node updateReadme.js"
+  },
+  "keywords": [
+    "javascript",
+    "algorithms",
+    "data-structures"
+  ],
+  "author": "",
+  "license": "MIT"
+}
