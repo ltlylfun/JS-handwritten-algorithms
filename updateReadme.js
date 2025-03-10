@@ -107,7 +107,15 @@ function generateReadmeContent(fileGroups) {
 
 function main() {
   const projectRoot = path.resolve(__dirname);
-  const files = scanDirectory(projectRoot);
+  const jshaFolderPath = path.join(projectRoot, "JSHA"); // 从JSHA目录获取文件
+
+  // 确保JSHA文件夹存在
+  if (!fs.existsSync(jshaFolderPath)) {
+    console.error("错误: JSHA文件夹不存在!");
+    return;
+  }
+
+  const files = scanDirectory(jshaFolderPath, "JSHA"); // 以JSHA为基础路径
   const fileGroups = groupFilesByType(files);
   const readmeContent = generateReadmeContent(fileGroups);
 
