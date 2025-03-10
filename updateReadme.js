@@ -9,6 +9,7 @@ const IGNORED_FILES = [
   "updateReadme.js",
   "package.json",
   "package-lock.json",
+  "LICENSE",
 ];
 
 function getChineseComment(filePath) {
