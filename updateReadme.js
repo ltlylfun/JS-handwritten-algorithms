@@ -87,13 +87,19 @@ function generateReadmeContent(fileGroups) {
     files.sort((a, b) => a.path.localeCompare(b.path));
 
     for (const file of files) {
-      // 去除路径中的 JSHA/ 前缀用于显示
-      const displayPath = file.path.replace(/^JSHA\//, "");
+      // 去除路径中的 JSHA/ 前缀用于显示,并统一使用正斜杠
+      const displayPath = file.path
+        .replace(/^JSHA[\/\\]/, "")
+        .replace(/\\/g, "/");
+      // 同样统一链接中的路径分隔符
+      const linkPath = file.path.replace(/\\/g, "/");
+
       const displayText = file.chineseComment
         ? `${displayPath} (${file.chineseComment})`
         : displayPath;
-      // 保持原始路径以维护链接的正确性
-      content += `- [${displayText}](./${file.path})\n`;
+
+      // 使用正确格式的链接路径
+      content += `- [${displayText}](./${linkPath})\n`;
     }
 
     content += "\n";
