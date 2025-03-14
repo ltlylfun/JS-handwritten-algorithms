@@ -17,7 +17,7 @@
 - [generateParenthesis.js (生成有效括号组合)](./JSHA/generateParenthesis.js)
 - [inorderTraversal.js (二叉树的中序遍历)](./JSHA/inorderTraversal.js)
 - [invertTree.js (翻转二叉树)](./JSHA/invertTree.js)
-- [isSymmetric.js](./JSHA/isSymmetric.js)
+- [isSymmetric.js (判断二叉树是否对称)](./JSHA/isSymmetric.js)
 - [isValid.js (括号有效匹配)](./JSHA/isValid.js)
 - [lengthOfLongestSubstring.js (无重复最长子串)](./JSHA/lengthOfLongestSubstring.js)
 - [longestPalindrome.js (最长回文子串)](./JSHA/longestPalindrome.js)
