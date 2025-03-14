@@ -26,6 +26,7 @@
 - [maxSubArray.js (最大和的连续子数组)](./JSHA/maxSubArray.js)
 - [merge.js (合并区间（面过）)](./JSHA/merge.js)
 - [moveZeroes.js (移动零)](./JSHA/moveZeroes.js)
+- [permute.js (全排列)](./JSHA/permute.js)
 - [quickSort.js (给一个随机数组，用快速排序的方法进行排序（面过）)](./JSHA/quickSort.js)
 - [reverseList.js (反转链表)](./JSHA/reverseList.js)
 - [shuffle.js (实现一个简单的洗牌算法)](./JSHA/shuffle.js)

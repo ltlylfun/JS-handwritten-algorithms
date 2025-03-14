@@ -23,7 +23,7 @@ function swap(arr, i, j) {
 
 function quickSort(arr, left = 0, right = arr.length - 1) {
   if (left < right) {
-    var mid = partition(arr, left, right);
+    let mid = partition(arr, left, right);
     quickSort(arr, left, mid - 1);
     quickSort(arr, mid + 1, right);
   }
@@ -44,5 +44,5 @@ function partition(arr, left, right) {
 }
 
 // test
-var arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+let arr = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
 console.log(quickSort(arr)); // [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
