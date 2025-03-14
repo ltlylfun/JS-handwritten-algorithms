@@ -20,6 +20,7 @@
 - [isSymmetric.js (判断二叉树是否对称)](./JSHA/isSymmetric.js)
 - [isValid.js (括号有效匹配)](./JSHA/isValid.js)
 - [lengthOfLongestSubstring.js (无重复最长子串)](./JSHA/lengthOfLongestSubstring.js)
+- [levelOrder.js (二叉树的层序遍历)](./JSHA/levelOrder.js)
 - [longestPalindrome.js (最长回文子串)](./JSHA/longestPalindrome.js)
 - [maxDepth.js (给定一个二叉树 root ，返回其最大深度。)](./JSHA/maxDepth.js)
 - [maxSubArray.js (最大和的连续子数组)](./JSHA/maxSubArray.js)
